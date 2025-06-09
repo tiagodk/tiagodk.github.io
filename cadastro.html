@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="escudo.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav>
+        <div class="link">
+            <a href="index.html" class="navlink">Home</a>
+            <a href="historia.html" class="navlink">História</a>
+            <a href="titulos.html" class="navlink">Títulos</a>
+            <a href="lendas.html" class="navlink">Lendas</a>
+            <span class="atual">Cadastro</span>
+        </div>
+    </nav>
+
+    <main>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <div class="input-box">
+                            <label for="login">E-mail:</label>
+                            <br>
+                            <input type="email" name="login" id="login" minlength="5" required accesskey="1">
+                            <br>
+                            <small>(alt + 1)</small>
+                        </div>
+                    </td>
+                    <td class="linha-vertical" rowspan="3"></td>
+                    <td>
+                        <div class="input-box">
+                            <label for="date">Data de Nascimento:</label>
+                            <br>
+                            <input type="date" name="data" id="data" required>
+                        </div>
+                    </td>
+                    <td class="linha-vertical" rowspan="3"></td>
+                    <td rowspan="3">
+                        <div class="input-box">
+                            <input type="submit" value="Cadastrar" id="botao">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-box">
+                            <label for="senha">Senha:</label>
+                            <br>
+                            <input type="password" name="senha" id="senha" minlength="8" required accesskey="2">
+                            <br>
+                            <small>(alt + 2)</small>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-box">
+                            <label for="idade">Idade:</label>
+                            <br>
+                            <input type="number" name="idade" id="idade" min="10" max="120" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-box">
+                            <label for="sexo">Sexo:</label>
+                            <br>
+                            <input type="radio" name="sexo" id="sexo" value="M" checked> M
+                            <input type="radio" name="sexo" id="sexo" value="F"> F
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-box">
+                            <label for="jf">Jogador Favorito:</label>
+                            <br>
+                            <select name="jf" id="jf" required>
+                                <option value=""></option>
+                                <option value="y">Yamal</option>
+                                <option value="r">Raphinha</option>
+                                <option value="d">De Jong</option>
+                                <option value="l">Lewandowski</option>
+                                <option value="p">Pedri</option>
+                                <option value="t">Ter Stegen</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+		<div class="footer">
+			<p>© 2025. Todos os direitos reservados.</p>
+		</div>
+	</footer>
+    
+</body>
+</html>

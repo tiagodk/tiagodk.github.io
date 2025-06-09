@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, #a60042, #004c99);
+	background-size: cover;
+    background-attachment: fixed;
+}
+
+.link{
+    text-decoration: none;
+    background-color: #23232e;
+    border: solid 2px #23232e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px #23232e;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.ancora{
+    text-decoration: none;
+    background-color: #2f2f3e;
+    border: solid 2px #2f2f3e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px #2f2f3e;
+    height: 6vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.atual{
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 20px;
+    opacity: 0.3;
+    cursor: default;
+}
+
+main{
+    height: 587vh;
+}
+
+.fundotext{
+    background-color: #23232e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #23232e;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 500px;
+}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    color: white;
+}
+
+p{
+    text-align: justify;
+    color: white;
+    padding-top: 100px;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#t4{
+    height: 800px;
+}
+iframe{
+    padding-top: 80px;
+    padding-left: 280px;
+}
+
+#vtr{
+    padding-left: 900px;
+    font-size: 25px;
+}
+
+#vtr:hover {
+    text-decoration: underline;
+}
+
