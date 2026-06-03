@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Nominal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="menuInicial" class="tela ativa">
+
+        <div class="tituloSvgWrap" aria-label="Conexão Nominal">
+            <svg width="100%" viewBox="0 0 680 260" role="img" xmlns="http://www.w3.org/2000/svg">
+                <title>Conexão Nominal</title>
+                <desc>Título do jogo Conexão Nominal</desc>
+                <style>
+                    .tL { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 72px; }
+                    .tSub { font-family: Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 8px; fill: #64748B; }
+                    @keyframes tP1 { 0%,100%{opacity:1} 50%{opacity:0.5} }
+                    @keyframes tP2 { 0%,100%{opacity:0.5} 50%{opacity:1} }
+                    @keyframes tP3 { 0%,100%{opacity:0.85} 40%{opacity:0.45} }
+                    @keyframes tBob { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-6px)} }
+                    .tGa { animation: tP1 3.4s ease-in-out infinite; }
+                    .tGb { animation: tP2 3.0s ease-in-out infinite; }
+                    .tGc { animation: tP3 3.8s ease-in-out infinite; }
+                    .tCa { animation: tBob 3.2s ease-in-out infinite; }
+                    .tCb { animation: tBob 3.2s ease-in-out 1.6s infinite; }
+                    .tCc { animation: tBob 3.2s ease-in-out 0.8s infinite; }
+                    .tCd { animation: tBob 3.2s ease-in-out 2.4s infinite; }
+                </style>
+
+                <g class="tCa"><rect x="18" y="48" width="44" height="60" rx="8" fill="#3B82F6" opacity="0.18"/><rect x="20" y="50" width="40" height="56" rx="7" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.45"/></g>
+                <g class="tCb"><rect x="618" y="48" width="44" height="60" rx="8" fill="#EF4444" opacity="0.18"/><rect x="620" y="50" width="40" height="56" rx="7" fill="none" stroke="#EF4444" stroke-width="1.5" opacity="0.45"/></g>
+                <g class="tCc"><rect x="18" y="148" width="44" height="60" rx="8" fill="#9CA3AF" opacity="0.14"/><rect x="20" y="150" width="40" height="56" rx="7" fill="none" stroke="#9CA3AF" stroke-width="1.2" opacity="0.35"/></g>
+                <g class="tCd"><rect x="618" y="148" width="44" height="60" rx="8" fill="#111827" opacity="0.22"/><rect x="620" y="150" width="40" height="56" rx="7" fill="none" stroke="#6B7280" stroke-width="1.2" opacity="0.45"/></g>
+
+                <line x1="76" y1="30" x2="604" y2="30" stroke="#8B5CF6" stroke-width="1.5" opacity="0.3"/>
+                <line x1="76" y1="228" x2="604" y2="228" stroke="#8B5CF6" stroke-width="1.5" opacity="0.3"/>
+                <polygon points="69,30 76,23 83,30 76,37" fill="#8B5CF6" opacity="0.45"/>
+                <polygon points="597,30 604,23 611,30 604,37" fill="#8B5CF6" opacity="0.45"/>
+
+                <defs>
+                    <linearGradient id="gradCon" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#A78BFA"/>
+                        <stop offset="100%" stop-color="#60A5FA"/>
+                    </linearGradient>
+                    <linearGradient id="gradNom" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#F87171"/>
+                        <stop offset="100%" stop-color="#FB923C"/>
+                    </linearGradient>
+                </defs>
+                <g class="tGa">
+                    <text class="tL" x="340" y="120" text-anchor="middle" fill="url(#gradCon)">CONEXÃO</text>
+                </g>
+                <g class="tGc">
+                    <text class="tL" x="340" y="208" text-anchor="middle" fill="url(#gradNom)">NOMINAL</text>
+                </g>
+
+                <text class="tSub" x="340" y="248" text-anchor="middle">CLASSES NOMINAIS</text>
+            </svg>
+        </div>
+
+        <div class="menuBotoes">
+            <button class="btn-jogar" onclick="abrirConfiguracoes()">▶ Jogar</button>
+            <button class="btn-regras" onclick="abrirRegras()">📋 Regras</button>
+            <button class="btn-tutorial" onclick="abrirTutorial()">💡 Tutorial</button>
+        </div>
+
+    </section>
+
+    <section id="regras" class="tela">
+
+        <h2>Regras do Jogo</h2>
+
+        <div class="caixaRegras">
+
+            <p>
+                • O jogo é disputado entre duas equipes:
+                Azul e Vermelha.
+            </p>
+
+            <p>
+                • Cada equipe deve escolher um Mestre.
+                Apenas os Mestres podem visualizar o mapa secreto.
+            </p>
+
+            <p>
+                • O objetivo é descobrir todas as palavras da sua equipe
+                antes da equipe adversária.
+            </p>
+
+            <p>
+                • O Mestre deve dar apenas UMA dica por rodada,
+                utilizando obrigatoriamente um adjetivo.
+            </p>
+
+            <p>
+                • Após a dica, a equipe deve tentar descobrir
+                quais substantivos estão relacionados ao adjetivo informado.
+            </p>
+
+            <p>
+                • Se a equipe clicar em uma palavra da própria cor,
+                continua pontuando normalmente.
+            </p>
+
+            <p>
+                • Se clicar em uma palavra neutra,
+                o turno acaba imediatamente.
+            </p>
+
+            <p>
+                • Se clicar em uma palavra da equipe adversária,
+                o ponto vai para o outro time.
+            </p>
+
+            <p>
+                • Existe uma carta preta chamada Carta Assassina.
+                Caso uma equipe clique nela,
+                perde automaticamente a partida.
+            </p>
+
+            <p>
+                • A equipe que descobrir todas as suas palavras primeiro vence.
+            </p>
+
+        </div>
+
+        <button onclick="voltarMenu()">Voltar</button>
+
+    </section>
+
+    <section id="configuracoes" class="tela">
+
+        <h2>Configurações</h2>
+
+        <div class="configBox">
+
+            <div class="grupoConfig">
+
+                <label>Quantidade de palavras</label>
+
+                <div class="opcoesConfig">
+
+                    <button
+                        class="opcao ativaOpcao"
+                        onclick="selecionarPalavras(16, this)">
+
+                        16
+
+                    </button>
+
+                    <button
+                        class="opcao"
+                        onclick="selecionarPalavras(20, this)">
+
+                        20
+
+                    </button>
+
+                    <button
+                        class="opcao"
+                        onclick="selecionarPalavras(25, this)">
+
+                        25
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button onclick="iniciarJogo()">
+                Iniciar Jogo
+            </button>
+
+        </div>
+
+        <button class="botaoVoltar" onclick="voltarMenu()">
+            Voltar
+        </button>
+
+    </section>
+
+    <section id="tutorial" class="tela">
+
+        <header>
+            <h1>Tutorial</h1>
+
+            <p>
+                Exemplo prático de funcionamento do jogo.
+            </p>
+        </header>
+
+        <div class="caixaRegras">
+
+            <p>
+                • Cartas azuis pertencem à Equipe Azul.
+            </p>
+
+            <p>
+                • Cartas vermelhas pertencem à Equipe Vermelha.
+            </p>
+
+            <p>
+                • A carta cinza é neutra.
+            </p>
+
+            <p>
+                • A carta preta encerra a partida imediatamente.
+            </p>
+
+            <p>
+                • Neste exemplo, o Mestre poderia dar a dica:
+                “Gelado”.
+            </p>
+
+        </div>
+
+        <section class="tabuleiro tutorialGrid">
+
+            <div class="carta reveladaAzul">
+                Oceano
+            </div>
+
+            <div class="carta reveladaAzul">
+                Neve
+            </div>
+
+            <div class="carta reveladaVermelho">
+                Vulcão
+            </div>
+
+            <div class="carta reveladaVermelho">
+                Deserto
+            </div>
+
+            <div class="carta neutra">
+                Janela
+            </div>
+
+            <div class="carta assassina">
+                Tempestade
+            </div>
+
+        </section>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <button onclick="voltarMenu()">
+                Voltar
+            </button>
+        </div>
+
+    </section>
+
+    <section id="jogo" class="tela">
+
+        <header>
+            <h1>Conexão Nominal</h1>
+            <p>Uma dica. Muitas possibilidades.</p>
+        </header>
+
+        <section class="mensagemInicial" id="mensagemInicial">
+            As equipes devem decidir quem será o Mestre.
+        </section>
+
+        <section class="placar">
+            <div class="time azul">
+                Azul: <span id="pontosAzul">0</span>
+            </div>
+
+            <div class="time vermelho">
+                Vermelho: <span id="pontosVermelho">0</span>
+            </div>
+        </section>
+
+        <section class="controles">
+            <button id="botaoMapa" onclick="alternarMapa()">
+                Mostrar mapa secreto
+            </button>
+        </section>
+
+        <section id="mensagem"></section>
+
+        <section class="tabuleiro" id="tabuleiro"></section>
+
+    </section>
+
+    <section id="telaFinal" class="tela">
+
+        <div class="finalBox">
+
+            <h1 id="mensagemFinal"></h1>
+
+            <button onclick="reiniciarJogo()">
+                Novo jogo
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="palavras.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

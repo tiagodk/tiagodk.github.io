@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0F172A;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ───── TELAS ───── */
+
+.tela {
+    display: none;
+}
+
+.ativa {
+    display: block;
+}
+
+/* ───── MENU INICIAL ───── */
+
+#menuInicial {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 3vh;
+    text-align: center;
+}
+
+#menuInicial.ativa {
+    display: flex;
+}
+
+.tituloSvgWrap {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 0 auto;
+}
+
+.menuBotoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 32px;
+}
+
+.menuBotoes button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 28px;
+    min-width: unset;
+    width: 100%;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.15s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.menuBotoes button:hover {
+    transform: translateY(-3px);
+}
+
+.btn-jogar {
+    background-color: #7C3AED;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+    font-size: 1.15rem !important;
+    padding: 18px 28px !important;
+}
+
+.btn-jogar:hover {
+    background-color: #6D28D9 !important;
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.65) !important;
+}
+
+.btn-regras {
+    background-color: #1E3A5F;
+    border: 1.5px solid #3B82F6 !important;
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.2);
+}
+
+.btn-regras:hover {
+    background-color: #1E40AF !important;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+.btn-tutorial {
+    background-color: #1E293B;
+    border: 1.5px solid #475569 !important;
+}
+
+.btn-tutorial:hover {
+    background-color: #334155 !important;
+    border-color: #64748B !important;
+}
+
+/* ───── BOTÃO GENÉRICO (demais telas) ───── */
+
+button {
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    padding: 14px 34px;
+    min-width: 180px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 3px 14px rgba(124, 58, 237, 0.35);
+}
+
+button:hover {
+    background-color: #6D28D9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* ───── REGRAS ───── */
+
+#regras {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding: 50px 20px 40px;
+}
+
+#regras.ativa {
+    display: flex;
+}
+
+#regras h2 {
+    font-size: 2.2rem;
+    color: #A78BFA;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#regras h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #A78BFA, #60A5FA);
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+/* ───── CONFIGURAÇÕES ───── */
+
+#configuracoes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 40px 20px;
+}
+
+#configuracoes.ativa {
+    display: flex;
+}
+
+#configuracoes h2 {
+    font-size: 2.2rem;
+    color: #A78BFA;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#configuracoes h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #A78BFA, #60A5FA);
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+/* ───── CAIXA DE REGRAS / CONFIG ───── */
+
+.caixaRegras,
+.configBox {
+    background-color: #1E293B;
+    padding: 32px 36px;
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 0 24px 0;
+    border: 1.5px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 30px rgba(139, 92, 246, 0.15);
+}
+
+.configBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixaRegras p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: #CBD5E1;
+    line-height: 1.7;
+    padding-left: 4px;
+    border-left: 3px solid rgba(139, 92, 246, 0.35);
+    padding-left: 12px;
+    border-radius: 2px;
+}
+
+.caixaRegras p:last-child {
+    margin-bottom: 0;
+}
+
+/* ───── CONFIG BOX INTERNA ───── */
+
+.grupoConfig {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    align-items: center;
+}
+
+.grupoConfig label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.opcoesConfig {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.opcao {
+    background-color: #0F172A;
+    border: 1.5px solid #334155 !important;
+    min-width: 90px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: none;
+    color: #94A3B8;
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.opcao:not(.ativaOpcao):hover {
+    border-color: #8B5CF6 !important;
+    color: white;
+    transform: translateY(-2px);
+    background-color: #1E293B !important;
+    box-shadow: none !important;
+}
+
+.ativaOpcao {
+    background-color: #4C1D95 !important;
+    border: 1.5px solid #A78BFA !important;
+    color: white !important;
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.4) !important;
+}
+
+.configBox > button {
+    width: fit-content;
+    align-self: center;
+    margin-top: 28px;
+    padding: 14px 36px;
+    min-width: unset;
+}
+
+.botaoVoltar {
+
+    min-width: 140px;
+
+    padding: 12px 24px;
+
+    font-size: 0.95rem;
+
+    margin-top: 15px;
+}
+
+/* ───── TUTORIAL ───── */
+
+#tutorial {
+    max-width: 780px;
+    margin: auto;
+    padding: 50px 20px 40px;
+}
+
+#tutorial header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+#tutorial header h1 {
+    font-size: 2.2rem;
+    color: #A78BFA;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+#tutorial header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #A78BFA, #60A5FA);
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+#tutorial header p {
+    margin-top: 10px;
+    color: #64748B;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+#tutorial .caixaRegras {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutorialGrid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 700px;
+    margin: 28px auto 0;
+}
+
+/* ───── TELA DE JOGO ───── */
+
+#jogo {
+    max-width: 1140px;
+    margin: auto;
+    padding: 20px 10px 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#jogo header h1 {
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #A78BFA,
+        #60A5FA,
+        #F87171
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 20px rgba(167, 139, 250, 0.25);
+
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-top: 6px;
+    color: #64748B;
+    font-size: 0.9rem;
+}
+
+.mensagemInicial {
+    background-color: #1E293B;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #94A3B8;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.time {
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.azul {
+    background-color: #3B82F6;
+    border: 1.5px solid #93C5FD;
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+}
+
+.vermelho {
+    background-color: #EF4444;
+    border: 1.5px solid #FCA5A5;
+    box-shadow: 0 2px 12px rgba(239, 68, 68, 0.3);
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+#botaoMapa {
+    min-width: unset;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    background-color: #1E293B;
+    border: 1.5px solid #475569;
+    box-shadow: none;
+}
+
+#botaoMapa:hover {
+    background-color: #334155;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 14px rgba(139, 92, 246, 0.3);
+}
+
+#mensagem {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #A78BFA;
+    letter-spacing: 0.5px;
+    min-height: 24px;
+}
+
+/* ───── TABULEIRO E CARTAS ───── */
+
+.tabuleiro {
+    display: grid;
+    gap: 12px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.carta {
+    background-color: #F8F3E7;
+    color: #1F2937;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    user-select: none;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carta:not(.reveladaAzul):not(.reveladaVermelho):not(.neutra):not(.assassina):not(.mapaAssassina):hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.reveladaAzul {
+    background-color: #3B82F6;
+    color: white;
+    border-color: #93C5FD;
+    cursor: default;
+}
+
+.reveladaVermelho {
+    background-color: #EF4444;
+    color: white;
+    border-color: #FCA5A5;
+    cursor: default;
+}
+
+.neutra {
+    background-color: #475569;
+    color: #CBD5E1;
+    border-color: #64748B;
+    cursor: default;
+}
+
+.assassina {
+    background-color: #0F0F0F;
+    color: #9CA3AF;
+    border-color: #374151;
+    cursor: default;
+}
+
+.mapaAzul {
+    background-color: #3B82F6 !important;
+    color: white !important;
+    border: 2px solid #60A5FA !important;
+    box-shadow: 0 0 14px rgba(59, 130, 246, 0.6) !important;
+    transform: scale(1.02);
+}
+
+.mapaVermelho {
+    background-color: #EF4444 !important;
+    color: white !important;
+    border: 2px solid #F87171 !important;
+    box-shadow: 0 0 14px rgba(239, 68, 68, 0.6) !important;
+    transform: scale(1.02);
+}
+
+.mapaAssassina {
+    background-color: #000000 !important;
+    color: #6B7280 !important;
+    border: 2px solid #374151 !important;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.08) !important;
+    transform: scale(1.03);
+    cursor: default;
+}
+
+/* ───── TELA FINAL ───── */
+
+#telaFinal {
+    display: none;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#telaFinal.ativa {
+    display: flex;
+}
+
+.finalBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+    background-color: #1E293B;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 60px;
+    border-radius: 24px;
+    border: 1.5px solid rgba(139, 92, 246, 0.45);
+    box-shadow: 0 8px 50px rgba(139, 92, 246, 0.2);
+}
+
+.finalBox h1 {
+    font-size: 2.8rem;
+    color: #A78BFA;
+    max-width: 460px;
+    line-height: 1.35;
+    word-break: break-word;
+}
+
+/* ───── CORES DE DESTAQUE ───── */
+
+.textoAzul {
+    color: #60A5FA;
+}
+
+.textoVermelho {
+    color: #F87171;
+}
+
+/* ───── RESPONSIVO ───── */
+
+@media (max-width: 900px) {
+    .tabuleiro {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabuleiro {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .finalBox {
+        padding: 50px 30px;
+    }
+
+    .finalBox h1 {
+        font-size: 2rem;
+    }
+}
